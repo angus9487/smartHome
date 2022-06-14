@@ -35,8 +35,6 @@
       <template #title>Navigator Four</template>
     </el-menu-item>
   </el-menu>
-  <iframe width="280" height="300" hspace="0"
-          src="https://i.tianqi.com/?c=code&a=getcode&id=55&icon=1"></iframe>
 </template>
 <script lang="ts" setup>
 import {ref} from 'vue'

@@ -1,7 +1,5 @@
 <template>
   <v-chart class="chart" :option="polar"/>
-  <iframe width="800" height="150" frameborder="0" scrolling="no" hspace="0"
-          src="https://i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe>
 </template>
 <script>
 export default {

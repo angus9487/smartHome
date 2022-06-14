@@ -3,7 +3,8 @@ import service from "@/request/index";
 const apiUrl = {
     health: '/',
     config: '/config',
-    history: '/history/period'
+    history: '/history/period',
+    states: "/states"
 }
 
 export function healthCheck() {
@@ -20,6 +21,9 @@ export function getHistory(queryData: any) {
     return service.get(url, queryData.getParams)
 }
 
+export function getAllStates() {
+    return service.get(apiUrl.states)
+}
 
 export function formatDate() {
     //三目运算符
