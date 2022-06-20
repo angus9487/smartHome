@@ -7,7 +7,7 @@ module.exports = {
     assetsDir: 'public',
     devServer: {
         open: true,
-        // host: '192.168.1.58',
+        // host: '192.168.1.19',
         host: 'localhost',
         port: 8090,
         https: false,
@@ -25,4 +25,5 @@ module.exports = {
         }
     }
 }
+
 

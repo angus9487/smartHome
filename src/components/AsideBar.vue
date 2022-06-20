@@ -1,9 +1,9 @@
 <template>
-  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :label="false">expand</el-radio-button>
-    <el-radio-button :label="true">collapse</el-radio-button>
-  </el-radio-group>
-  <el-menu
+<!--  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">-->
+<!--    <el-radio-button :label="false">expand</el-radio-button>-->
+<!--    <el-radio-button :label="true">collapse</el-radio-button>-->
+<!--  </el-radio-group>-->
+  <el-menu style="top: 25%"
       default-active="2"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
@@ -14,25 +14,25 @@
       <el-icon>
         <HomeFilled/>
       </el-icon>
-      <template #title>Navigator One</template>
+      <template #title>家庭总览</template>
     </el-menu-item>
     <el-menu-item index="2">
       <el-icon>
         <home-filled/>
       </el-icon>
-      <template #title>Navigator Two</template>
+      <template #title>Two</template>
     </el-menu-item>
     <el-menu-item index="3">
       <el-icon>
         <document/>
       </el-icon>
-      <template #title>Navigator Three</template>
+      <template #title>Three</template>
     </el-menu-item>
     <el-menu-item index="4">
       <el-icon>
         <setting/>
       </el-icon>
-      <template #title>Navigator Four</template>
+      <template #title>Four</template>
     </el-menu-item>
   </el-menu>
 </template>
@@ -57,7 +57,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <style>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
+  width: 130px;
   min-height: 200px;
 }
 </style>
