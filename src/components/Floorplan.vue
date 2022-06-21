@@ -1,29 +1,49 @@
 <template>
-  <div class="zonglan" style="position: relative">
-    <el-card class="box-card" style="width: 100px; height: 100px; left: 50px;margin-top: 100px; position: absolute">
-      <div v-for="o in 4" :key="o" class="text item" style="color: antiquewhite;font-size: 12px; font-weight: 100;"
-           :id="o">{{ 'List item ' + o }}
-      </div>
-    </el-card>
-    <svg style="width: 100% ;height: 100%" viewBox="0 0 100 100">
-      <polyline points="2,2 2,10 10,10 10,20 20,20" style="fill:none; stroke: #5ae6b7; stroke-width:0.3px;"></polyline>
-      <polyline points="80,82 85,95 105,95" style="fill:none; stroke: chocolate; stroke-width:0.3px;"></polyline>
-    </svg>
-    <img style="z-index: -5" src="dark.png" alt="dark" class="backImg">
-    <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
+  <el-container>
+    <el-header style="height: 90px;">
+      <iframe allowtransparency="true" frameborder="0" width="575" height="96" scrolling="no"
+              src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=575&h=96&align=center"></iframe>
+    </el-header>
+    <el-main style="width: 1000px;height: 600px;">
+      <div class="zonglan" style="position: relative; margin-left: 0px;">
+        <!--    <el-card class="box-card" style="width: 100px; height: 100px; left: 50px;margin-top: 100px; position: absolute">-->
+        <!--      <div v-for="o in 4" :key="o" class="text item" style="color: antiquewhite;font-size: 12px; font-weight: 100;"-->
+        <!--           :id="o">{{ 'List item ' + o }}-->
+        <!--      </div>-->
+        <!--    </el-card>-->
+        <el-dialog
+            v-model="dialogVisible"
+            title="详细信息"
+            width="30%">
+          <RoomDetail/>
+        </el-dialog>
+        <svg style="width: 100% ;height: 100%" viewBox="0 0 100 100">
+          <polyline points="2,2 2,10 10,10 10,20 20,20"
+                    style="fill:none; stroke: #5ae6b7; stroke-width:0.3px;"></polyline>
+          <polyline points="80,82 85,95 105,95" style="fill:none; stroke: chocolate; stroke-width:0.3px;"></polyline>
+        </svg>
+        <img style="z-index: -5" src="dark.png" alt="dark" class="backImg">
+        <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
 
-    <img style="z-index: -4" src="logo.png" alt="dark">
-    <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
-         @click="callService(icon[0])" :alt="icon[0]"/>
-    <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
-    <!--             alt="eagle" class="backImg"/>-->
-  </div>
+        <img src="anniu.png" alt="dark" @click="dialogVisible = true">
+        <img src="anniu.png" alt="dark" class="zhuwodetaile">
+        <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
+             @click="callService(icon[0])" :alt="icon[0]"/>
+        <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
+        <!--             alt="eagle" class="backImg"/>-->
+      </div>
+    </el-main>
+  </el-container>
 </template>
 <script>
 import {doService} from "@/request/haws";
 import {devicesData} from "@/components/main/data";
+import RoomDetail from "@/components/main/roomDetail";
 
 export default {
+  components: {
+    RoomDetail
+  },
   name: 'Index-Tab',
   methods: {
     initConn(con) {
@@ -135,6 +155,7 @@ export default {
   },
   data() {
     return {
+      dialogVisible: false,
       count: 0,
       imageDatas: [],
       states: new Map,
@@ -179,5 +200,13 @@ export default {
 
 .el-card {
   background: transparent !important;
+}
+
+.zhuwodetaile {
+  width: 30px;
+  height: 30px;
+  margin-left: 65%;
+  margin-top: 50%;
+  z-index: -4;
 }
 </style>

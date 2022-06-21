@@ -4,7 +4,8 @@
 <!--    <el-radio-button :label="true">collapse</el-radio-button>-->
 <!--  </el-radio-group>-->
   <el-menu style="top: 25%"
-      default-active="2"
+      default-active="1"
+      background-color="transparent"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       @open="handleOpen"
