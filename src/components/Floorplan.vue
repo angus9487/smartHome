@@ -1,16 +1,11 @@
 <template>
-  <el-container>
-    <el-header style="height: 90px;">
-      <iframe allowtransparency="true" frameborder="0" width="575" height="96" scrolling="no"
+  <el-row>
+    <el-col style="width: 1000px;height: 80px;margin-top: 0px">
+      <iframe class="tianqi" allowtransparency="true" frameborder="0" scrolling="no"
               src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=575&h=96&align=center"></iframe>
-    </el-header>
-    <el-main style="width: 1000px;height: 600px;">
+    </el-col>
+    <el-col style="width: 1000px;height: 580px;;margin-top: 0px">
       <div class="zonglan" style="position: relative; margin-left: 0px;">
-        <!--    <el-card class="box-card" style="width: 100px; height: 100px; left: 50px;margin-top: 100px; position: absolute">-->
-        <!--      <div v-for="o in 4" :key="o" class="text item" style="color: antiquewhite;font-size: 12px; font-weight: 100;"-->
-        <!--           :id="o">{{ 'List item ' + o }}-->
-        <!--      </div>-->
-        <!--    </el-card>-->
         <el-dialog
             v-model="dialogVisible"
             title="详细信息"
@@ -32,8 +27,8 @@
         <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
         <!--             alt="eagle" class="backImg"/>-->
       </div>
-    </el-main>
-  </el-container>
+    </el-col>
+  </el-row>
 </template>
 <script>
 import {doService} from "@/request/haws";
@@ -208,5 +203,11 @@ export default {
   margin-left: 65%;
   margin-top: 50%;
   z-index: -4;
+}
+.tianqi {
+  position: center;
+  width: 575px;
+  height: 96px;
+  margin-top: 0px;
 }
 </style>

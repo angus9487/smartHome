@@ -1,8 +1,8 @@
 <template>
   <Index/>
-  <div>
-    <img src="homekit-bg-orange.jpg" style="width: 100%;height: 100%" class="header-background" alt="bg"/>
-  </div>
+<!--  <div>-->
+<!--    <img src="homekit-bg-orange.jpg" style="width: 100%;height: 100%" class="header-background" alt="bg"/>-->
+<!--  </div>-->
 </template>
 
 <script lang="ts">
