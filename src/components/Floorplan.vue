@@ -1,18 +1,19 @@
 <template>
   <el-row>
-    <el-col style="width: 1000px;height: 80px;margin-top: 0px">
+    <el-col class="iframe">
       <iframe class="tianqi" allowtransparency="true" frameborder="0" scrolling="no"
               src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=575&h=96&align=center"></iframe>
     </el-col>
-    <el-col style="width: 1000px;height: 580px;;margin-top: 0px">
-      <div class="zonglan" style="position: relative; margin-left: 0px;">
+    <!--    <el-col style="width: 1000px;height: 580px;margin-top: 0px">-->
+    <el-col>
+      <div class="zonglan">
         <el-dialog
             v-model="dialogVisible"
             title="详细信息"
             width="30%">
           <RoomDetail/>
         </el-dialog>
-        <img style="z-index: -5" src="dark.png" alt="dark" class="backImg">
+        <img src="dark.png" alt="dark" class="backImg">
         <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
 
         <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">
@@ -177,6 +178,8 @@ export default {
   height: 580px;
   left: 0;
   margin-top: 0;
+  position: relative;
+  margin-left: 0;
 }
 
 .backImg {
@@ -186,6 +189,7 @@ export default {
   left: 0;
   top: 0;
   position: absolute;
+  z-index: -5;
 }
 
 .body {
@@ -206,6 +210,12 @@ export default {
   height: 30px;
   margin-left: 65%;
   margin-top: 50%;
+}
+
+.iframe {
+  width: 1000px;
+  height: 80px;
+  margin-top: 0
 }
 
 .tianqi {

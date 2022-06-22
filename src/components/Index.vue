@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-container style="width: 1150px;height: 700px;position: center">
+    <el-container style="width: 1100px;height: 700px;position: center">
       <el-aside style="width: 140px;height: 700px;">
         <AsideBar/>
       </el-aside>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import AsideBar from '@/components/AsideBar.vue'
+import AsideBar from '@/components/aside/AsideBar.vue'
 
 export default {
   name: 'Index-Tab',
