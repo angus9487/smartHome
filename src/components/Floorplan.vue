@@ -12,16 +12,10 @@
             width="30%">
           <RoomDetail/>
         </el-dialog>
-        <svg style="width: 100% ;height: 100%" viewBox="0 0 100 100">
-          <polyline points="2,2 2,10 10,10 10,20 20,20"
-                    style="fill:none; stroke: #5ae6b7; stroke-width:0.3px;"></polyline>
-          <polyline points="80,82 85,95 105,95" style="fill:none; stroke: chocolate; stroke-width:0.3px;"></polyline>
-        </svg>
         <img style="z-index: -5" src="dark.png" alt="dark" class="backImg">
         <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
 
-        <img src="anniu.png" alt="dark" @click="dialogVisible = true">
-        <img src="anniu.png" alt="dark" class="zhuwodetaile">
+        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">
         <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
              @click="callService(icon[0])" :alt="icon[0]"/>
         <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
@@ -212,7 +206,6 @@ export default {
   height: 30px;
   margin-left: 65%;
   margin-top: 50%;
-  z-index: -4;
 }
 
 .tianqi {
