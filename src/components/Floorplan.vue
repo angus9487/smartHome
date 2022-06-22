@@ -31,11 +31,18 @@
   </el-row>
 </template>
 <script>
-import {doService} from "@/request/haws";
+import {doService, getConnection} from "@/request/haws";
 import {devicesData} from "@/components/main/data";
 import RoomDetail from "@/components/main/roomDetail";
 
 export default {
+  // props: ['connect'],
+  // watch: {
+  //   connect: function (val) {
+  //     this.initConn(val)
+  //     console.log("fp watch");   // 接收父组件的值
+  //   }
+  // },
   components: {
     RoomDetail
   },
@@ -123,6 +130,9 @@ export default {
       }, 3000);
     },
     init() {
+      getConnection().then(con => {
+        this.initConn(con)
+      })
       console.log("init")
       for (let location of Object.keys(devicesData)) {
         devicesData[location].light.forEach(v => {
@@ -204,6 +214,7 @@ export default {
   margin-top: 50%;
   z-index: -4;
 }
+
 .tianqi {
   position: center;
   width: 575px;

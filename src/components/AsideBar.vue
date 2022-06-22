@@ -1,23 +1,24 @@
 <template>
-<!--  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">-->
-<!--    <el-radio-button :label="false">expand</el-radio-button>-->
-<!--    <el-radio-button :label="true">collapse</el-radio-button>-->
-<!--  </el-radio-group>-->
-  <el-menu style="top: 25%"
-      default-active="1"
-      background-color="transparent"
-      class="el-menu-vertical-demo"
-      :collapse="isCollapse"
-      @open="handleOpen"
-      @close="handleClose"
+  <!--  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">-->
+  <!--    <el-radio-button :label="false">expand</el-radio-button>-->
+  <!--    <el-radio-button :label="true">collapse</el-radio-button>-->
+  <!--  </el-radio-group>-->
+  <el-menu router
+           style="top: 25%"
+           default-active="overview"
+           background-color="transparent"
+           class="el-menu-vertical-demo"
+           :collapse="isCollapse"
+           @open="handleOpen"
+           @close="handleClose"
   >
-    <el-menu-item index="1">
+    <el-menu-item index="overview" route="overview">
       <el-icon>
         <HomeFilled/>
       </el-icon>
       <template #title>家庭总览</template>
     </el-menu-item>
-    <el-menu-item index="2">
+    <el-menu-item index="about" route="about">
       <el-icon>
         <home-filled/>
       </el-icon>
@@ -41,8 +42,6 @@
 import {ref} from 'vue'
 import {
   Document,
-  Menu as IconMenu,
-  Location,
   Setting,
   HomeFilled,
 } from '@element-plus/icons-vue'

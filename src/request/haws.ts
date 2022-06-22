@@ -16,17 +16,17 @@ export async function connect() {
     console.log("haws connect");
     let auth;
     const authOptions = {
-            async loadTokens() {
-                try {
-                    return JSON.parse(localStorage.hassTokens);
-                } catch (err) {
-                    return undefined;
-                }
-            },
-            saveTokens: (tokens:AuthData|null) => {
-                localStorage.hassTokens = JSON.stringify(tokens);
-            },
-        };
+        async loadTokens() {
+            try {
+                return JSON.parse(localStorage.hassTokens);
+            } catch (err) {
+                return undefined;
+            }
+        },
+        saveTokens: (tokens: AuthData | null) => {
+            localStorage.hassTokens = JSON.stringify(tokens);
+        },
+    };
     try {
         // Try to pick up authentication after user logs in
         auth = await getAuth(authOptions);
@@ -59,10 +59,15 @@ export async function connect() {
 }
 
 export async function getConnection() {
+    if (!connection) {
+        console.log("not connect")
+        await connect()
+    }
     return new Promise((resolve, reject) => {
         // dosomething
         return resolve(connection)
     })
+
 }
 
 export async function doService(service: string, serviceData: any) {

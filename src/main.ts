@@ -1,16 +1,20 @@
 import {createApp} from 'vue'
+// import routes from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 import VueECharts from 'vue-echarts'
 import VueFullscreen from 'vue-fullscreen'
-import VueRouter from 'vue-router'
+import router from './router'
 import "echarts";
-import Vue from 'vue'
+
+// createApp(App).component('v-chart', VueECharts).use(ElementPlus).use(router).mount('#app')
 
 const app = createApp(App)
-
 app.component('v-chart', VueECharts)
-app.use(ElementPlus, VueFullscreen, VueRouter)
+app.use(router)
+app.use(ElementPlus)
+// app.use(VueFullscreen)
+// app.use(router)
 // app.use(fullscreen)
 app.mount('#app')
