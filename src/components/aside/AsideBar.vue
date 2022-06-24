@@ -18,11 +18,11 @@
       </el-icon>
       <template #title>家庭总览</template>
     </el-menu-item>
-    <el-menu-item index="about" route="about">
+    <el-menu-item index="allDevice" route="allDevice">
       <el-icon>
         <home-filled/>
       </el-icon>
-      <template #title>Two</template>
+      <template #title>设备分区</template>
     </el-menu-item>
     <el-menu-item index="3">
       <el-icon>

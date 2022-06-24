@@ -32,9 +32,9 @@ export async function connect() {
         auth = await getAuth(authOptions);
     } catch (err) {
         if (err === ERR_HASS_HOST_REQUIRED) {
-            const hassUrl = "http://192.168.1.10:8123"
+            // const hassUrl = "http://192.168.1.10:8123"
             // const hassUrl = "http://10.147.17.10:8123"
-            // const hassUrl = "http://ha.shunqin.store"
+            const hassUrl = "http://ha.shunqin.store"
             // Redirect user to log in on their instance
             auth = await getAuth({hassUrl});
         } else {

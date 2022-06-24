@@ -28,7 +28,6 @@
 <script>
 import {doService, getConnection} from "@/request/haws";
 import {devicesData} from "@/components/main/data";
-import RoomDetail from "@/components/main/roomDetail";
 
 export default {
   // props: ['connect'],
@@ -39,7 +38,6 @@ export default {
   //   }
   // },
   components: {
-    RoomDetail
   },
   name: 'Index-Tab',
   methods: {
@@ -130,12 +128,14 @@ export default {
       })
       console.log("init")
       for (let location of Object.keys(devicesData)) {
-        devicesData[location].light.forEach(v => {
-          if (v.icon) {
-            this.iconList.set(v.id, v.icon)
-          }
-          this.deviceIdList.push(v.id);
-        })
+        if (devicesData[location].light) {
+          devicesData[location].light.forEach(v => {
+            if (v.icon) {
+              this.iconList.set(v.id, v.icon)
+            }
+            this.deviceIdList.push(v.id);
+          })
+        }
       }
       // this.deviceList.forEach(v => {
       //   this.iconList.set(v.id, v)

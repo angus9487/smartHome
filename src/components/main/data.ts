@@ -1,5 +1,84 @@
 export const devicesData = {
+    // "home": {
+    //     "tab": "家庭"
+    // },
+    "keting": {
+        "tab": "客厅",
+        "light": [{
+            "id": "switch.ke_ting_da_deng",
+            "icon": {
+                "style": "z-index: 10;margin-top: 37.5%;left: 40%;zoom:0.5;",
+                "src": "undefined.png"
+            }
+        },
+            {
+                "id": "light.ke_ting_tong_deng",
+                "icon": {
+                    "style": "z-index: 10;margin-top: 37.5%;left: 33%;zoom:0.5;",
+                    "src": "undefined.png"
+                }
+            },
+            {
+                "id": "light.dian_shi_tong_deng",
+                "icon": {
+                    "style": "z-index: 10;margin-top: 37.5%;left: 46.8%;zoom:0.5;",
+                    "src": "undefined.png"
+                }
+            },
+            {
+                "id": "light.diao_yu_deng",
+                "icon": {
+                    "style": "z-index: 10;margin-top: 42.2%;left: 36.2%;zoom:0.5;",
+                    "src": "undefined.png"
+                }
+            }]
+    },
+    "canting": {
+        "tab": "餐厅",
+        "light": [{
+            "id": "switch.can_ting_da_deng",
+            "icon": {
+                "style": "z-index: 10;margin-top: 17%;left: 40%;zoom:0.5;",
+                "src": "undefined.png"
+            }
+        },
+            {
+                "id": "switch.can_ting_tong_deng",
+                "icon": {
+                    "style": "z-index: 10;margin-top: 17%;left: 33%;zoom:0.5;",
+                    "src": "undefined.png"
+                }
+            }]
+    },
+    "yangtai": {
+        "tab": "阳台",
+        "light": [{
+            "id": "light.yang_tai_deng",
+            "icon": {
+                "style": "z-index: 10;margin-top: 49%;left: 40%;zoom:0.5;",
+                "src": "undefined.png"
+            }
+        }]
+    },
+    "chufang": {
+        "tab": "厨房",
+        "light": [{
+            "id": "switch.chu_fang_ding_deng",
+            "icon": {
+                "style": "z-index: 10;margin-top: 8%;left: 25%;zoom:0.5;",
+                "src": "undefined.png"
+            }
+        },
+            {
+                "id": "switch.chu_fang_tong_deng",
+                "icon": {
+                    "style": "z-index: 10;margin-top: 13%;left: 26%;zoom:0.5;",
+                    "src": "undefined.png"
+                }
+            }]
+    },
     "zhuwo": {
+        "tab": "主卧",
         "light": [
             {
                 "id": "switch.zhu_wo_da_deng",
@@ -37,6 +116,7 @@ export const devicesData = {
             }]
     },
     "zhuwei": {
+        "tab": "主卫",
         "light": [{
             "id": "switch.zhu_wei_ding_deng",
             "icon": {
@@ -53,6 +133,7 @@ export const devicesData = {
             }]
     },
     "ciwo": {
+        "tab": "次卧",
         "light": [{
             "id": "switch.ci_wo_da_deng",
             "icon": {
@@ -62,6 +143,7 @@ export const devicesData = {
         }]
     },
     "ciwei": {
+        "tab": "次卫",
         "light": [{
             "id": "switch.ci_wei_ding_deng",
             "icon": {
@@ -71,6 +153,7 @@ export const devicesData = {
         }]
     },
     "shufang": {
+        "tab": "书房",
         "light": [{
             "id": "switch.shu_fang_da_deng",
             "icon": {
@@ -84,6 +167,7 @@ export const devicesData = {
         }]
     },
     "yimaojian": {
+        "tab": "衣帽间",
         "light": [{
             "id": "switch.yi_mao_jian_da_deng",
             "icon": {
@@ -93,6 +177,7 @@ export const devicesData = {
         }]
     },
     "zoulang": {
+        "tab": "走廊",
         "light": [{
             "id": "switch.zou_lang_yi",
             "icon": {
@@ -111,77 +196,6 @@ export const devicesData = {
                 "id": "switch.zou_lang_san",
                 "icon": {
                     "style": "z-index: 10;margin-top: 26%;left: 56%;zoom:0.5;",
-                    "src": "undefined.png"
-                }
-            }]
-    },
-    "keting": {
-        "light": [{
-            "id": "switch.ke_ting_da_deng",
-            "icon": {
-                "style": "z-index: 10;margin-top: 37.5%;left: 40%;zoom:0.5;",
-                "src": "undefined.png"
-            }
-        },
-            {
-                "id": "light.ke_ting_tong_deng",
-                "icon": {
-                    "style": "z-index: 10;margin-top: 37.5%;left: 33%;zoom:0.5;",
-                    "src": "undefined.png"
-                }
-            },
-            {
-                "id": "light.dian_shi_tong_deng",
-                "icon": {
-                    "style": "z-index: 10;margin-top: 37.5%;left: 46.8%;zoom:0.5;",
-                    "src": "undefined.png"
-                }
-            },
-            {
-                "id": "light.diao_yu_deng",
-                "icon": {
-                    "style": "z-index: 10;margin-top: 42.2%;left: 36.2%;zoom:0.5;",
-                    "src": "undefined.png"
-                }
-            }]
-    },
-    "canting": {
-        "light": [{
-            "id": "switch.can_ting_da_deng",
-            "icon": {
-                "style": "z-index: 10;margin-top: 17%;left: 40%;zoom:0.5;",
-                "src": "undefined.png"
-            }
-        },
-            {
-                "id": "switch.can_ting_tong_deng",
-                "icon": {
-                    "style": "z-index: 10;margin-top: 17%;left: 33%;zoom:0.5;",
-                    "src": "undefined.png"
-                }
-            }]
-    },
-    "yangtai": {
-        "light": [{
-            "id": "light.yang_tai_deng",
-            "icon": {
-                "style": "z-index: 10;margin-top: 49%;left: 40%;zoom:0.5;",
-                "src": "undefined.png"
-            }
-        }]
-    },
-    "chufang": {
-        "light": [{
-            "id": "switch.chu_fang_ding_deng",
-            "icon": {
-                "style": "z-index: 10;margin-top: 8%;left: 25%;zoom:0.5;",
-                "src": "undefined.png"
-            }
-        },
-            {
-                "id": "switch.chu_fang_tong_deng",
-                "icon": {
-                    "style": "z-index: 10;margin-top: 13%;left: 26%;zoom:0.5;",
                     "src": "undefined.png"
                 }
             }]
