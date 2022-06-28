@@ -8,14 +8,15 @@
     <el-col>
       <div class="zonglan">
         <el-button v-for="climate in climateList" :type="climate[1].icon.type" circle size="large"
-                   :style="climate[1].icon.style"
+                   :style="climate[1].icon.style" @click="this.setClimateUrl(climate[0])"
                    :key="climate[0]">{{ climate[1].state.temperature + '℃' }}
         </el-button>
         <el-dialog
             v-model="dialogVisible"
             title="详细信息"
-            width="30%">
-          <RoomDetail/>
+            center
+            width="35%">
+            <iframe class="kongtiao" frameborder="no"  :src="this.climateUrl"></iframe>
         </el-dialog>
         <img src="dark.png" alt="dark" class="backImg">
         <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
@@ -124,12 +125,12 @@ export default {
       let state
       this.climateList.forEach((v, k) => {
         state = this.states.get(k)
-        if (state === "on") {
-          v.icon.type = "success"
+        if (state === "undefined") {
+          v.icon.type = "info"
         } else if (state === "off") {
           v.icon.type = ""
         } else {
-          v.icon.type = "info"
+          v.icon.type = "success"
         }
       })
     },
@@ -138,6 +139,11 @@ export default {
       this.timer = setInterval(() => {
         console.log("开始---");
       }, 3000);
+    },
+    setClimateUrl(climate) {
+      console.log(climate.substring(8))
+      this.dialogVisible = true
+      this.climateUrl = 'http://ha.shunqin.store/lovelace-sh/'+climate.substring(8)+'?kiosk'
     },
     init() {
       getConnection().then(con => {
@@ -187,6 +193,7 @@ export default {
       imageDatas: [],
       states: new Map,
       deviceIdList: [],
+      climateUrl: '',
       climateList: new Map,
       iconList: new Map
     };
@@ -239,7 +246,14 @@ export default {
   margin-left: 65%;
   margin-top: 50%;
 }
-
+.kongtiao {
+  width: 300px;
+  height: 350px;
+  position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .iframe {
   width: 1000px;
   height: 80px;
