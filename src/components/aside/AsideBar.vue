@@ -3,8 +3,13 @@
   <!--    <el-radio-button :label="false">expand</el-radio-button>-->
   <!--    <el-radio-button :label="true">collapse</el-radio-button>-->
   <!--  </el-radio-group>-->
+
+  <div >
+    <iframe class="homeAssistantS" frameborder="no" src="http://ha.shunqin.store/lovelace-sh/0?kiosk"></iframe>
+  </div>
+
   <el-menu router
-           style="top: 25%"
+           style="top: 15%"
            default-active="overview"
            background-color="transparent"
            class="el-menu-vertical-demo"
@@ -22,9 +27,9 @@
       <el-icon>
         <home-filled/>
       </el-icon>
-      <template #title>设备分区</template>
+      <template #title>房间状况</template>
     </el-menu-item>
-    <el-menu-item index="3">
+    <el-menu-item index="ha" route="ha">
       <el-icon>
         <document/>
       </el-icon>
@@ -59,5 +64,10 @@ const handleClose = (key: string, keyPath: string[]) => {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 130px;
   min-height: 200px;
+}
+
+.homeAssistantS {
+  width: 140px;
+  height: 200px;
 }
 </style>

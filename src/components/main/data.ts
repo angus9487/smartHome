@@ -4,6 +4,12 @@ export const devicesData = {
     // },
     "keting": {
         "tab": "客厅",
+        "climate": {
+            "id": "climate.ke_ting_kong_diao",
+            "icon": {
+                "style": "margin-top: 42%;margin-left: 40%;position: absolute",
+            },
+        },
         "light": [{
             "id": "switch.ke_ting_da_deng",
             "icon": {
@@ -35,6 +41,12 @@ export const devicesData = {
     },
     "canting": {
         "tab": "餐厅",
+        "climate": {
+            "id": "climate.can_ting_kong_diao",
+            "icon": {
+                "style": "margin-top: 10%;margin-left: 39%;position: absolute",
+            }
+        },
         "light": [{
             "id": "switch.can_ting_da_deng",
             "icon": {
@@ -79,6 +91,12 @@ export const devicesData = {
     },
     "zhuwo": {
         "tab": "主卧",
+        "climate": {
+            "id": "climate.zhu_wo_kong_diao",
+            "icon": {
+                "style": "margin-top: 50%;margin-left: 68%;position: absolute",
+            }
+        },
         "light": [
             {
                 "id": "switch.zhu_wo_da_deng",
@@ -134,6 +152,12 @@ export const devicesData = {
     },
     "ciwo": {
         "tab": "次卧",
+        "climate": {
+            "id": "climate.ci_wo_kong_diao",
+            "icon": {
+                "style": "margin-top: 43%;margin-left: 53%;position: absolute",
+            }
+        },
         "light": [{
             "id": "switch.ci_wo_da_deng",
             "icon": {
@@ -154,6 +178,12 @@ export const devicesData = {
     },
     "shufang": {
         "tab": "书房",
+        "climate": {
+            "id": "climate.shu_fang_kong_diao",
+            "icon": {
+                "style": "margin-top: 12%;margin-left: 60%;position: absolute",
+            }
+        },
         "light": [{
             "id": "switch.shu_fang_da_deng",
             "icon": {
@@ -168,6 +198,12 @@ export const devicesData = {
     },
     "yimaojian": {
         "tab": "衣帽间",
+        "climate": {
+            "id": "climate.yi_mao_jian_kong_diao",
+            "icon": {
+                "style": "margin-top: 15%;margin-left: 73%;position: absolute",
+            }
+        },
         "light": [{
             "id": "switch.yi_mao_jian_da_deng",
             "icon": {

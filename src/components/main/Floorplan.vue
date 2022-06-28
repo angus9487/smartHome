@@ -7,6 +7,10 @@
     <!--    <el-col style="width: 1000px;height: 580px;margin-top: 0px">-->
     <el-col>
       <div class="zonglan">
+        <el-button v-for="climate in climateList" :type="climate[1].icon.type" circle size="large"
+                   :style="climate[1].icon.style"
+                   :key="climate[0]">{{ climate[1].state.temperature + '℃' }}
+        </el-button>
         <el-dialog
             v-model="dialogVisible"
             title="详细信息"
@@ -16,7 +20,7 @@
         <img src="dark.png" alt="dark" class="backImg">
         <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
 
-        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">
+        <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
         <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
              @click="callService(icon[0])" :alt="icon[0]"/>
         <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
@@ -37,8 +41,7 @@ export default {
   //     console.log("fp watch");   // 接收父组件的值
   //   }
   // },
-  components: {
-  },
+  components: {},
   name: 'Index-Tab',
   methods: {
     initConn(con) {
@@ -85,7 +88,8 @@ export default {
       this.states = newState;
       this.updateImage()
       this.updateIcon()
-      console.log('LeaderLine')
+      this.updateClimate()
+      console.log(this.states)
     },
     callService(entity) {
       // console.log(entity)
@@ -116,6 +120,19 @@ export default {
         }
       })
     },
+    updateClimate() {
+      let state
+      this.climateList.forEach((v, k) => {
+        state = this.states.get(k)
+        if (state === "on") {
+          v.icon.type = "success"
+        } else if (state === "off") {
+          v.icon.type = ""
+        } else {
+          v.icon.type = "info"
+        }
+      })
+    },
     start() {
       // 将定时器名字赋值到变量中
       this.timer = setInterval(() => {
@@ -136,7 +153,17 @@ export default {
             this.deviceIdList.push(v.id);
           })
         }
+        if (devicesData[location].climate) {
+          let initState = {"state": "off", "current_temperature": 26.0, "temperature": 26.0}
+          let climate = devicesData[location].climate
+          climate.state = initState
+          // climate.icon.type = "info"
+          climate.icon.type = "success"
+          this.climateList.set(climate.id, climate)
+          this.deviceIdList.push(climate.id);
+        }
       }
+      console.log(this.deviceIdList)
       // this.deviceList.forEach(v => {
       //   this.iconList.set(v.id, v)
       //   this.deviceIdList.push(v.id);
@@ -160,6 +187,7 @@ export default {
       imageDatas: [],
       states: new Map,
       deviceIdList: [],
+      climateList: new Map,
       iconList: new Map
     };
   }
