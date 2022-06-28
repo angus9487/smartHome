@@ -8,6 +8,7 @@ export const devicesData = {
             "id": "climate.ke_ting_kong_diao",
             "icon": {
                 "style": "margin-top: 42%;margin-left: 40%;position: absolute",
+                "src": "undefined.png"
             },
         },
         "light": [{
