@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-import Index from '@/components/Index.vue'; // @ is an alias to /src
+import Index from '@/components/index.vue'; // @ is an alias to /src
 
 @Options({
   components: {

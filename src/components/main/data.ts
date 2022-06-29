@@ -191,10 +191,6 @@ export const devicesData = {
                 "style": "z-index: 10;margin-top: 18%;left: 60%;zoom:0.5;",
                 "src": "undefined.png"
             }
-        }, {
-            "id": "light.liang_zi_deng",
-        }, {
-            "id": "switch.shu_fang_rgb",
         }]
     },
     "yimaojian": {

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import AsideBar from '@/components/aside/AsideBar.vue'
+import AsideBar from '@/components/aside/asideBar.vue'
 
 export default {
   name: 'Index-Tab',

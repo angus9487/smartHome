@@ -1,10 +1,12 @@
 <template>
   <el-row>
-    <el-col class="iframe">
-      <iframe class="tianqi" allowtransparency="true" frameborder="0" scrolling="no"
-              src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=575&h=96&align=center"></iframe>
+    <el-col class="top">
+      <el-button type="info" plain round>离家</el-button>
+      <el-button type="info" plain round>回家</el-button>
+      <el-button type="info" plain round>观影</el-button>
+      <!--      <iframe class="tianqi" allowtransparency="true" frameborder="0" scrolling="no"-->
+      <!--              src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=5&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=1&c=54511&w=575&h=96&align=center"></iframe>-->
     </el-col>
-    <!--    <el-col style="width: 1000px;height: 580px;margin-top: 0px">-->
     <el-col>
       <div class="zonglan">
         <el-button v-for="climate in climateList" :type="climate[1].icon.type" circle size="large"
@@ -16,7 +18,9 @@
             title="详细信息"
             center
             width="35%">
-            <iframe class="kongtiao" frameborder="no"  :src="this.climateUrl"></iframe>
+          <div align="center">
+            <iframe class="kongtiao" frameborder="no" :src="this.climateUrl"></iframe>
+          </div>
         </el-dialog>
         <img src="dark.png" alt="dark" class="backImg">
         <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
@@ -90,7 +94,7 @@ export default {
       this.updateImage()
       this.updateIcon()
       this.updateClimate()
-      console.log(this.states)
+      // console.log(this.states)
     },
     callService(entity) {
       // console.log(entity)
@@ -141,9 +145,9 @@ export default {
       }, 3000);
     },
     setClimateUrl(climate) {
-      console.log(climate.substring(8))
+      // console.log(climate.substring(8))
       this.dialogVisible = true
-      this.climateUrl = 'http://ha.shunqin.store/lovelace-sh/'+climate.substring(8)+'?kiosk'
+      this.climateUrl = 'http://ha.shunqin.store/lovelace-sh/' + climate.substring(8) + '?kiosk'
     },
     init() {
       getConnection().then(con => {
@@ -170,17 +174,6 @@ export default {
         }
       }
       console.log(this.deviceIdList)
-      // this.deviceList.forEach(v => {
-      //   this.iconList.set(v.id, v)
-      //   this.deviceIdList.push(v.id);
-      // })
-
-      // this.iconList.forEach((v, k) => {
-      //   this.diviceList.push(k);
-      // })
-      // console.log(this.diviceList)
-      // console.log(this.iconList.keys())
-      // this.$forceUpdate;
     }
   },
   mounted() {
@@ -240,12 +233,6 @@ export default {
   background: transparent !important;
 }
 
-.zhuwodetaile {
-  width: 30px;
-  height: 30px;
-  margin-left: 65%;
-  margin-top: 50%;
-}
 .kongtiao {
   width: 300px;
   height: 350px;
@@ -254,10 +241,16 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.iframe {
+
+.top {
   width: 1000px;
   height: 80px;
   margin-top: 0
+}
+
+.top button {
+  width: 100px;
+  height: 40px
 }
 
 .tianqi {
