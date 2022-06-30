@@ -87,7 +87,7 @@ export default {
           .forEach((entity) => {
             let entId = entity.entity_id
             if (this.deviceIdList.includes(entId)) {
-              newState.set(entId, entity.state)
+              newState.set(entId, entity)
             }
           })
       this.states = newState;
@@ -115,7 +115,7 @@ export default {
     updateIcon() {
       let state
       this.iconList.forEach((v, k) => {
-        state = this.states.get(k)
+        state = this.states.get(k).state
         if (state === "on") {
           v.src = "lighton.png"
         } else if (state === "off") {
@@ -127,8 +127,11 @@ export default {
     },
     updateClimate() {
       let state
+      let deviceInfo
       this.climateList.forEach((v, k) => {
-        state = this.states.get(k)
+        deviceInfo = this.states.get(k)
+        state = deviceInfo.state
+        v.state.temperature = deviceInfo.attributes.temperature
         if (state === "undefined") {
           v.icon.type = "info"
         } else if (state === "off") {
