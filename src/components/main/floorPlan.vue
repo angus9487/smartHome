@@ -23,7 +23,6 @@
           </div>
         </el-dialog>
         <img src="dark.png" alt="dark" class="backImg">
-        <!--    <img style="z-index: -5" src="back.jpg" alt="back" class="backImg">-->
 
         <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
         <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
