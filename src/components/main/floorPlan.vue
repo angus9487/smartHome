@@ -25,10 +25,12 @@
         <img src="dark.png" alt="dark" class="backImg">
 
         <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
-        <img v-for="icon in iconList" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
+        <img v-for="icon in iconMap" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
              @click="callService(icon[0])" :alt="icon[0]"/>
-        <!--        <img v-for="image in imageDatas" :src="image.src" style="z-index: -4" v-bind:key="image.key" :id="image.key"-->
-        <!--             alt="eagle" class="backImg"/>-->
+        <div v-for="image in imageMap" v-bind:key="image[0]">
+          <img v-if="image[1].show" :src="image[1].src" :style="image[1].style"
+               :alt="image[0]" class="backImg"/>
+        </div>
       </div>
     </el-col>
   </el-row>
@@ -71,13 +73,24 @@ export default {
       // console.log(data)
       let entity = (data.variables.trigger.entity_id)
       let state = (data.variables.trigger.to_state.state)
-      if (state === "on") {
-        this.iconList.get(entity).src = "lighton.png"
-      } else if (state === "off") {
-        this.iconList.get(entity).src = "lightoff.png"
-      } else {
-        this.iconList.get(entity).src = "undefined.png"
+      if (this.iconMap.has(entity)) {
+        this.setIcon(this.iconMap.get(entity), state)
       }
+      if (this.imageMap.has(entity)) {
+        this.setImage(this.imageMap.get(entity), state)
+      }
+    },
+    setIcon(v, state) {
+      if (state === "on") {
+        v.src = "lighton.png"
+      } else if (state === "off") {
+        v.src = "lightoff.png"
+      } else {
+        v.src = "undefined.png"
+      }
+    },
+    setImage(v, state) {
+      v.show = state === "on";
     },
     updateState(entities) {
       let newState = new Map;
@@ -103,25 +116,17 @@ export default {
       doService("toggle", serviceData)
     },
     updateImage() {
-      // console.log("updateImage")
-      // this.imageDatas = [{
-      //   "key": "logo", "zindex": "z-index: 2", "src": "logo.png"
-      // },
-      //   {
-      //     "key": "cc", "zindex": "z-index: 5", "src": "ciwo.png"
-      //   }]
+      let state
+      this.imageMap.forEach((v, k) => {
+        state = this.states.get(k).state
+        this.setImage(v, state)
+      })
     },
     updateIcon() {
       let state
-      this.iconList.forEach((v, k) => {
+      this.iconMap.forEach((v, k) => {
         state = this.states.get(k).state
-        if (state === "on") {
-          v.src = "lighton.png"
-        } else if (state === "off") {
-          v.src = "lightoff.png"
-        } else {
-          v.src = "undefined.png"
-        }
+        this.setIcon(v, state)
       })
     },
     updateClimate() {
@@ -160,7 +165,10 @@ export default {
         if (devicesData[location].light) {
           devicesData[location].light.forEach(v => {
             if (v.icon) {
-              this.iconList.set(v.id, v.icon)
+              this.iconMap.set(v.id, v.icon)
+            }
+            if (v.image) {
+              this.imageMap.set(v.id, v.image)
             }
             this.deviceIdList.push(v.id);
           })
@@ -175,7 +183,7 @@ export default {
           this.deviceIdList.push(climate.id);
         }
       }
-      console.log(this.deviceIdList)
+      console.log(this.imageMap)
     }
   },
   mounted() {
@@ -185,18 +193,25 @@ export default {
     return {
       dialogVisible: false,
       count: 0,
-      imageDatas: [],
+      imageMap: new Map,
       states: new Map,
       deviceIdList: [],
       climateUrl: '',
       climateList: new Map,
-      iconList: new Map
+      iconMap: new Map
     };
   }
 };
 </script>
 <style>
 .zonglan img {
+  /*max-width: 100%;*/
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.baseimg {
   /*max-width: 100%;*/
   left: 0;
   top: 0;

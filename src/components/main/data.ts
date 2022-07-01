@@ -16,6 +16,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 37.5%;left: 39%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "keda.png",
+                "show": false
             }
         },
             {
@@ -53,6 +58,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 15%;left: 38%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "canda.png",
+                "show": false
             }
         },
             {
