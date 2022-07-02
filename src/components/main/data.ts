@@ -28,6 +28,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 37.5%;left: 29.7%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "ketong.png",
+                    "show": false
                 }
             },
             {
@@ -35,6 +40,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 37.5%;left: 46.8%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "diantong.png",
+                    "show": false
                 }
             },
             {
@@ -42,6 +52,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 43.2%;left: 35.1%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "luodi.png",
+                    "show": false
                 }
             }]
     },
@@ -70,6 +85,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 18%;left: 30%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "cantong.png",
+                    "show": false
                 }
             }]
     },
@@ -80,6 +100,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 51%;left: 39%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "yangtai.png",
+                "show": false
             }
         }]
     },
@@ -90,6 +115,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 6%;left: 23%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "chuding.png",
+                "show": false
             }
         },
             {
@@ -97,6 +127,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 12%;left: 24%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "chutong.png",
+                    "show": false
                 }
             }]
     },
@@ -114,6 +149,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 46%;left: 70%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "zhuda.png",
+                    "show": false
                 }
             },
             {
@@ -121,12 +161,22 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 46%;left: 79%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-2",
+                    "src": "zhushe.png",
+                    "show": false
                 }
             }, {
                 "id": "switch.zou_lang_deng",
                 "icon": {
                     "style": "z-index: 10;margin-top: 35%;left: 63.5%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "zhutong.png",
+                    "show": false
                 }
             },
             {
@@ -134,6 +184,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 42%;left: 77.5%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-2",
+                    "src": "zuobi.png",
+                    "show": false
                 }
             },
             {
@@ -141,6 +196,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 50%;left: 77.5%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-2",
+                    "src": "youbi.png",
+                    "show": false
                 }
             }]
     },
@@ -151,6 +211,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 33%;left: 75%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "zhuwei.png",
+                "show": false
             }
         },
             {
@@ -158,6 +223,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 30%;left: 71%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "zhuweijing.png",
+                    "show": false
                 }
             }]
     },
@@ -174,6 +244,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top:39%;left: 54%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "ciwo.png",
+                "show": false
             }
         }]
     },
@@ -184,6 +259,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 17%;left: 51.5%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "ciwei.png",
+                "show": false
             }
         }]
     },
@@ -200,6 +280,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 17%;left: 61%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "shufang.png",
+                "show": false
             }
         }, {
             "id": "light.liang_zi_deng",
@@ -220,6 +305,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 21%;left: 74%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "yimaojian.png",
+                "show": false
             }
         }]
     },
@@ -230,6 +320,11 @@ export const devicesData = {
             "icon": {
                 "style": "z-index: 10;margin-top: 26%;left: 25%;zoom:0.5;",
                 "src": "undefined.png"
+            },
+            "image": {
+                "style": "z-index:-3",
+                "src": "zouyi.png",
+                "show": false
             }
         },
             {
@@ -237,6 +332,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 25.6%;left: 40%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "zouer.png",
+                    "show": false
                 }
             },
             {
@@ -244,6 +344,11 @@ export const devicesData = {
                 "icon": {
                     "style": "z-index: 10;margin-top: 25.2%;left: 57%;zoom:0.5;",
                     "src": "undefined.png"
+                },
+                "image": {
+                    "style": "z-index:-3",
+                    "src": "zousan.png",
+                    "show": false
                 }
             }]
     }
