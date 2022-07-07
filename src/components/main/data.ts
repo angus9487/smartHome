@@ -19,7 +19,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "keda.png",
+                "src": "bright/keda.png",
                 "show": false
             }
         },
@@ -31,7 +31,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "ketong.png",
+                    "src": "bright/ketong.png",
                     "show": false
                 }
             },
@@ -43,7 +43,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "diantong.png",
+                    "src": "bright/diantong.png",
                     "show": false
                 }
             },
@@ -55,7 +55,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "luodi.png",
+                    "src": "bright/luodi.png",
                     "show": false
                 }
             }]
@@ -76,7 +76,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "canda.png",
+                "src": "bright/canda.png",
                 "show": false
             }
         },
@@ -88,7 +88,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "cantong.png",
+                    "src": "bright/cantong.png",
                     "show": false
                 }
             }]
@@ -103,7 +103,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "yangtai.png",
+                "src": "bright/yangtai.png",
                 "show": false
             }
         }]
@@ -118,7 +118,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "chuding.png",
+                "src": "bright/chuding.png",
                 "show": false
             }
         },
@@ -130,7 +130,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "chutong.png",
+                    "src": "bright/chutong.png",
                     "show": false
                 }
             }]
@@ -152,7 +152,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "zhuda.png",
+                    "src": "bright/zhuda.png",
                     "show": false
                 }
             },
@@ -164,7 +164,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-2",
-                    "src": "zhushe.png",
+                    "src": "bright/zhushe.png",
                     "show": false
                 }
             }, {
@@ -175,7 +175,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "zhutong.png",
+                    "src": "bright/zhutong.png",
                     "show": false
                 }
             },
@@ -187,7 +187,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-2",
-                    "src": "zuobi.png",
+                    "src": "bright/zuobi.png",
                     "show": false
                 }
             },
@@ -199,7 +199,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-2",
-                    "src": "youbi.png",
+                    "src": "bright/youbi.png",
                     "show": false
                 }
             }]
@@ -214,7 +214,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "zhuwei.png",
+                "src": "bright/zhuwei.png",
                 "show": false
             }
         },
@@ -226,7 +226,7 @@ export const devicesData = {
                 },
                 "image": {
                     "style": "z-index:-3",
-                    "src": "zhuweijing.png",
+                    "src": "bright/zhuweijing.png",
                     "show": false
                 }
             }]
@@ -247,7 +247,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "ciwo.png",
+                "src": "bright/ciwo.png",
                 "show": false
             }
         }]
@@ -262,7 +262,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "ciwei.png",
+                "src": "bright/ciwei.png",
                 "show": false
             }
         }]
@@ -283,7 +283,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "shufang.png",
+                "src": "bright/shufang.png",
                 "show": false
             }
         }, {
@@ -308,7 +308,7 @@ export const devicesData = {
             },
             "image": {
                 "style": "z-index:-3",
-                "src": "yimaojian.png",
+                "src": "bright/yimaojian.png",
                 "show": false
             }
         }]
@@ -322,8 +322,8 @@ export const devicesData = {
                 "src": "undefined.png"
             },
             "image": {
-                "style": "z-index:-3",
-                "src": "zouyi.png",
+                "style": "z-index:-4",
+                "src": "bright/zouyi.png",
                 "show": false
             }
         },
@@ -334,8 +334,8 @@ export const devicesData = {
                     "src": "undefined.png"
                 },
                 "image": {
-                    "style": "z-index:-3",
-                    "src": "zouer.png",
+                    "style": "z-index:-4",
+                    "src": "bright/zouer.png",
                     "show": false
                 }
             },
@@ -346,8 +346,8 @@ export const devicesData = {
                     "src": "undefined.png"
                 },
                 "image": {
-                    "style": "z-index:-3",
-                    "src": "zousan.png",
+                    "style": "z-index:-4",
+                    "src": "bright/zousan.png",
                     "show": false
                 }
             }]
