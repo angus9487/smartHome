@@ -154,7 +154,7 @@ export default {
     setClimateUrl(climate) {
       // console.log(climate.substring(8))
       this.dialogVisible = true
-      this.climateUrl = 'http://ha.shunqin.store/lovelace-sh/' + climate.substring(8) + '?kiosk'
+      this.climateUrl = 'http://192.168.1.10:8123/lovelace-sh/' + climate.substring(8) + '?kiosk'
     },
     init() {
       getConnection().then(con => {
