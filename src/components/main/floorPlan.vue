@@ -160,7 +160,6 @@ export default {
       getConnection().then(con => {
         this.initConn(con)
       })
-      console.log("init")
       for (let location of Object.keys(devicesData)) {
         if (devicesData[location].light) {
           devicesData[location].light.forEach(v => {
@@ -183,7 +182,7 @@ export default {
           this.deviceIdList.push(climate.id);
         }
       }
-      console.log(this.imageMap)
+      // console.log(this.imageMap)
     }
   },
   mounted() {
