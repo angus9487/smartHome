@@ -25,7 +25,7 @@
         <div>
           <img src="dark.png" alt="dark" class="backImg" usemap="#drama" />
           <map id="drama" name="drama">
-            <area v-for="area in areaMap" v-bind:key="area[0]" :shape=area[1].shape :coords=area[1].coords @click="this.testClick(area[0])" alt="area[0]" />
+            <area v-for="area in areaMap" v-bind:key="area[0]" :shape=area[1].shape :coords=area[1].coords @click="callService(area[0])" alt="area[0]" />
           </map>
           <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
           <img v-for="icon in iconMap" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
