@@ -22,14 +22,19 @@
             <iframe class="kongtiao" frameborder="no" :src="this.climateUrl"></iframe>
           </div>
         </el-dialog>
-        <img src="dark.png" alt="dark" class="backImg">
-
-        <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
-        <img v-for="icon in iconMap" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
-             @click="callService(icon[0])" :alt="icon[0]"/>
-        <div v-for="image in imageMap" v-bind:key="image[0]">
-          <img v-if="image[1].show" :src="image[1].src" :style="image[1].style"
-               :alt="image[0]" class="backImg"/>
+        <div>
+          <img src="dark.png" alt="dark" class="backImg" usemap="#drama" />
+          <map id="drama" name="drama">
+            <area shape="rect" coords="271,41,980,500" @click="this.testClick()" alt="1" />
+            <!--          <area shape="rect" coords="270,40,400,100" @click="testClick" alt="2">-->
+          </map>
+          <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
+          <img v-for="icon in iconMap" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
+               @click="callService(icon[0])" :alt="icon[0]"/>
+          <div v-for="image in imageMap" v-bind:key="image[0]">
+            <img v-if="image[1].show" :src="image[1].src" :style="image[1].style"
+                 :alt="image[0]" class="lightImg" />
+          </div>
         </div>
       </div>
     </el-col>
@@ -50,6 +55,9 @@ export default {
   components: {},
   name: 'Index-Tab',
   methods: {
+    testClick() {
+      console.log("click")
+    },
     initConn(con) {
       let getState = {"type": "get_states"}
       con.sendMessagePromise(getState).then(v => this.updateState(v))
@@ -233,7 +241,19 @@ export default {
   left: 0;
   top: 0;
   position: absolute;
-  z-index: -5;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.lightImg {
+  /*width: 100%;*/
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .body {
