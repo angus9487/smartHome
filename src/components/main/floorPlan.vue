@@ -25,8 +25,7 @@
         <div>
           <img src="dark.png" alt="dark" class="backImg" usemap="#drama" />
           <map id="drama" name="drama">
-            <area shape="rect" coords="271,41,980,500" @click="this.testClick()" alt="1" />
-            <!--          <area shape="rect" coords="270,40,400,100" @click="testClick" alt="2">-->
+            <area v-for="area in areaMap" v-bind:key="area[0]" :shape=area[1].shape :coords=area[1].coords @click="this.testClick(area[0])" alt="area[0]" />
           </map>
           <!--        <img src="anniu.png" alt="dark" class="zhuwodetaile" @click="dialogVisible = true">-->
           <img v-for="icon in iconMap" :src="icon[1].src" :style="icon[1].style" v-bind:key="icon[0]"
@@ -55,8 +54,8 @@ export default {
   components: {},
   name: 'Index-Tab',
   methods: {
-    testClick() {
-      console.log("click")
+    testClick(id) {
+      console.log("click:"+id)
     },
     initConn(con) {
       let getState = {"type": "get_states"}
@@ -177,6 +176,9 @@ export default {
             if (v.image) {
               this.imageMap.set(v.id, v.image)
             }
+            if (v.area) {
+              this.areaMap.set(v.id, v.area)
+            }
             this.deviceIdList.push(v.id);
           })
         }
@@ -205,7 +207,8 @@ export default {
       deviceIdList: [],
       climateUrl: '',
       climateList: new Map,
-      iconMap: new Map
+      iconMap: new Map,
+      areaMap: new Map
     };
   }
 };
